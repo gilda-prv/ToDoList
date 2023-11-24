@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(img/creative-office-desk-light-colours.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 600px;
+}
+.container .header {
+  background-color: #212b32;
+  padding: 15px 40px 30px;
+  color: #d0ba87;
+  text-align: center;
+}
+.container .header h2 {
+  margin: 10px;
+  font-size: 35px;
+  color: #f3e8c4;
+}
+.container .header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container .tasklist {
+  max-height: 350px;
+  overflow-y: auto;
+}
+input {
+  width: 75%;
+  float: left;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+input::placeholder {
+  color: #212b32;
+}
+.addbtn {
+  width: 25%;
+  float: left;
+  border: none;
+  padding: 10px;
+  background: #9eb194;
+  color: #212b32;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.addbtn:hover {
+  background-color: #bbb;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #516863;
+  font-size: 18px;
+  transition: 0.3s;
+  user-select: none;
+  color: #fff;
+}
+ul li:hover {
+  background: rgb(205, 204, 204);
+}
+/* .closebtn {
+  display: none;
+  position: absolute;
+  right: 15px;
+}
+ul li:hover .closebtn {
+  display: inline-block;
+}
+ul li .closebtn i:hover {
+  color: #ec1d1d;
+}
+.tasklist li.done {
+  background-color: #223036;
+  color: white;
+  text-decoration: line-through;
+}
+.tasklist li.done::before {
+  content: " ";
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  border-color: #fff;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  transform: rotate(45deg);
+} */
