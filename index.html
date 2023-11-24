@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div id="App">
+      <div class="container">
+        <div class="header">
+          <h2>My To Do List</h2>
+          <input type="text" placeholder="New task..." v-model="inputvalue" />
+          <button class="addbtn" v-on:click="addTask">Add</button>
+        </div>
+        <ul class="tasklist">
+          <li v-for="goal in goals">{{goal}}</li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
