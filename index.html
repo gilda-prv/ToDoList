@@ -12,11 +12,23 @@
       <div class="container">
         <div class="header">
           <h2>My To Do List</h2>
-          <input type="text" placeholder="New task..." v-model="inputvalue" />
+          <input
+            type="text"
+            class="task-input"
+            placeholder="New task..."
+            v-model="inputvalue"
+          />
           <button class="addbtn" v-on:click="addTask">Add</button>
         </div>
         <ul class="tasklist">
-          <li v-for="goal in goals">{{goal}}</li>
+          <!-- <li v-for="goal in goals">{{goal}}</li> -->
+          <li class="task-list-item">
+            <label class="task-list-item-label">
+              <input type="checkbox" />
+              <span v-for="goal in goals">{{goal}}</span>
+            </label>
+            <span class="delete-btn" title="Delete Task"></span>
+          </li>
         </ul>
       </div>
     </div>
