@@ -13,18 +13,22 @@ body {
   justify-content: center;
 }
 .container {
+  max-width: 500px;
   width: 600px;
+  max-height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
 }
 .container .header {
   background-color: #212b32;
   padding: 15px 40px 30px;
-  color: #d0ba87;
+  color: #fff;
   text-align: center;
 }
 .container .header h2 {
   margin: 10px;
   font-size: 35px;
-  color: #f3e8c4;
+  color: #fff;
 }
 .container .header::after {
   content: "";
@@ -35,17 +39,19 @@ body {
   max-height: 350px;
   overflow-y: auto;
 }
-input {
+.task-input {
   width: 75%;
   float: left;
   border: none;
   outline: none;
+  border-bottom: 1px solid #9eb194;
+  background-color: transparent;
   border-radius: 0;
   padding: 10px;
   font-size: 16px;
 }
-input::placeholder {
-  color: #212b32;
+.task-input::placeholder {
+  color: #fff;
 }
 .addbtn {
   width: 25%;
@@ -65,10 +71,13 @@ input::placeholder {
 }
 ul {
   list-style-type: none;
+  padding: 0;
 }
-ul li {
+.task-list-item {
   cursor: pointer;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
   padding: 12px 8px 12px 40px;
   background: #516863;
   font-size: 18px;
@@ -76,8 +85,54 @@ ul li {
   user-select: none;
   color: #fff;
 }
-ul li:hover {
+.task-list-item:hover {
   background: rgb(205, 204, 204);
+}
+/* check list */
+.task-list-item input {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #212b32;
+  border-radius: 50%;
+  background-image: url(img/pngwing.com.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0;
+  transition: 0.2s;
+  margin-right: 8px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  appearance: none;
+  cursor: pointer;
+}
+.task-list-item input:checked {
+  background-size: 10px;
+  border: 1px solid black;
+}
+.task-list-item input:checked + span {
+  text-decoration: line-through #212b32;
+}
+.task-list-item-label {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 8px;
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  transition: 0.2s;
+  cursor: pointer;
+}
+/* delete-btn */
+.delete-btn {
+  margin-left: 50px;
+  margin-right: 5px;
+  display: block;
+  height: 16px;
+  background-image: url(img/trash.png);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  cursor: pointer;
 }
 /* .closebtn {
   display: none;
