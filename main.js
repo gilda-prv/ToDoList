@@ -2,7 +2,7 @@ new Vue({
   el: "#App",
   data() {
     return {
-      goals: [],
+      tasks: [],
       inputvalue: "",
     };
   },
@@ -11,9 +11,12 @@ new Vue({
       if (this.inputvalue == "") {
         alert("Please fill in the input!");
       } else {
-        this.goals.push(this.inputvalue);
+        this.tasks.push(this.inputvalue);
         this.inputvalue = "";
       }
+    },
+    delitem: function (task) {
+      this.tasks.splice(this.tasks.indexOf(task), 1);
     },
   },
 });
