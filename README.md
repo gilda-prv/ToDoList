@@ -19,3 +19,18 @@ Once the application is up and running, you can access it through your web brows
 - Add a new task by clicking the "Add" button and entering the task details.
 - Mark a task as completed by clicking the checkbox next to it.
 - Delete a task by clicking the "trash" button.
+### Screenshot
+
+![](/img/1.png)
+![](/img/2.png)
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Vuejs
+## Author
+
+- Github - [gilda-prv](https://github.com/gilda-prv)
+- Frontend Mentor - [@gilda-prv](https://www.frontendmentor.io/profile/gilda-prv)
