@@ -14,20 +14,23 @@
           <h2>My To Do List</h2>
           <input
             type="text"
+            autocomplete="off"
             class="task-input"
             placeholder="New task..."
             v-model="inputvalue"
+            @keyup.enter="addTask"
           />
           <button class="addbtn" v-on:click="addTask">Add</button>
         </div>
         <ul class="tasklist">
-          <!-- <li v-for="goal in goals">{{goal}}</li> -->
-          <li class="task-list-item">
+          <li class="task-list-item" v-for="task in tasks">
             <label class="task-list-item-label">
               <input type="checkbox" />
-              <span v-for="goal in goals">{{goal}}</span>
+              <span>{{task}}</span>
             </label>
-            <span class="delete-btn" title="Delete Task"></span>
+            <span class="delete-btn" title="Delete Task" @click="delitem(task)">
+              {{task.del}}
+            </span>
           </li>
         </ul>
       </div>
