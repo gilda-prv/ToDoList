@@ -49,6 +49,7 @@ body {
   border-radius: 0;
   padding: 10px;
   font-size: 16px;
+  color: #fff;
 }
 .task-input::placeholder {
   color: #fff;
@@ -74,10 +75,7 @@ ul {
   padding: 0;
 }
 .task-list-item {
-  cursor: pointer;
-  /* position: relative; */
-  display: flex;
-  align-items: center;
+  position: relative;
   padding: 12px 8px 12px 40px;
   background: #516863;
   font-size: 18px;
@@ -103,7 +101,6 @@ ul {
   flex-shrink: 0;
   margin-top: 4px;
   appearance: none;
-  cursor: pointer;
 }
 .task-list-item input:checked {
   background-size: 10px;
@@ -124,7 +121,7 @@ ul {
 }
 /* delete-btn */
 .delete-btn {
-  margin-left: 50px;
+  margin-left: 350px;
   margin-right: 5px;
   display: block;
   height: 16px;
@@ -133,32 +130,6 @@ ul {
   background-size: 16px;
   background-position: center;
   cursor: pointer;
+  position: relative;
+  bottom: 20px;
 }
-/* .closebtn {
-  display: none;
-  position: absolute;
-  right: 15px;
-}
-ul li:hover .closebtn {
-  display: inline-block;
-}
-ul li .closebtn i:hover {
-  color: #ec1d1d;
-}
-.tasklist li.done {
-  background-color: #223036;
-  color: white;
-  text-decoration: line-through;
-}
-.tasklist li.done::before {
-  content: " ";
-  width: 8px;
-  height: 16px;
-  position: absolute;
-  left: 15px;
-  top: 8px;
-  border-color: #fff;
-  border-width: 0 2px 2px 0;
-  border-style: solid;
-  transform: rotate(45deg);
-} */
